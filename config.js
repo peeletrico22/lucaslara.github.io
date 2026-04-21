@@ -21,9 +21,9 @@ window.CONFIG = {
   produto: {
     nome: "NutriKeto",
     slogan: "Guia Completo da Dieta Cetogênica para Emagrecimento Rápido",
-    preco_atual: "R$ 39,90",
+    preco_atual: "R$ 59,90",
     preco_antigo: "R$ 97,00",
-    parcelas: "ou 3x de R$13,30 sem juros",
+    parcelas: "ou 3x de R$19,97 sem juros",
   },
 
   // ============================================================
@@ -37,26 +37,15 @@ window.CONFIG = {
   },
 
   // ============================================================
-  // 3. VÍDEO DE VENDAS
-  // ============================================================
-  video: {
-    ativo: true,
-    youtube_id: "8UHEuNlSylw",
-    // ⚠️ Cole SOMENTE o ID do YouTube aqui (o trecho após "?v=")
-    // Exemplo: se a URL é youtube.com/watch?v=13SFe0UQiQE → cole apenas: 13SFe0UQiQE
-  },
-
-  // ============================================================
-  // 4. LINKS DE PAGAMENTO / CHECKOUT
+  // 3. LINKS DE PAGAMENTO / CHECKOUT
   // ============================================================
   checkout: {
-    link_principal: "#",
-    // SUBSTITUIR PELO LINK DA KIWIFY — ex: "https://pay.kiwify.com.br/XXXXXXX"
+    link_principal: "https://pay.kiwify.com.br/2L3JkOB",
     link_bump: "",
   },
 
   // ============================================================
-  // 5. CONTATO E SUPORTE
+  // 4. CONTATO E SUPORTE
   // ============================================================
   contato: {
     whatsapp_numero: "5531999999999",
@@ -65,279 +54,209 @@ window.CONFIG = {
   },
 
   // ============================================================
-  // 6. TEXTOS DA PÁGINA — COPY PRINCIPAL
+  // 5. TEXTOS DA PÁGINA — COPY PRINCIPAL
   // ============================================================
   copy: {
+    barra_topo: "🔥 Acesso imediato por R$59,90 — o contador está rodando e a condição some com ele",
 
-    // ----------------------------------------------------------
-    // BARRA DO TOPO — Urgência imediata, antes de qualquer leitura
-    // Técnica: escassez + especificidade de preço + ação futura
-    // ----------------------------------------------------------
-    barra_topo: "🔥 ÚLTIMAS HORAS: Acesso ao NutriKeto por R$39,90 — O preço volta para R$97 hoje à meia-noite",
+    hero_badge: "✦ Sem enrolação. Método direto. Resultado desde a primeira semana.",
+    hero_headline: "Você não falhou na dieta. A dieta é que nunca te deu um caminho de verdade",
+    hero_headline_destaque: "não falhou",
+    hero_subheadline: "O NutriKeto entrega o que faltava: um plano claro, cardápio pronto e o passo a passo para ativar a queima de gordura sem precisar reinventar tudo do zero toda segunda-feira.",
+    hero_prova_social: "+4.200 mulheres já pararam de adivinhar e começaram a ver resultado",
+    hero_cta: "Quero meu acesso agora",
+    hero_cta_nota: "🔒 Acesso liberado imediatamente após o pagamento",
 
-    // ----------------------------------------------------------
-    // HERO — A seção mais importante da página
-    // Técnica: Headline em 2 partes (dor + curiosidade), subheadline
-    // com promessa específica, prova social com número concreto
-    // ----------------------------------------------------------
-    hero_badge: "✦ Método Utilizado por +4.200 Mulheres Brasileiras",
-
-    // Headline usa o padrão "você já fez X, mas Y continua acontecendo?"
-    // — fórmula de identificação imediata com a dor
-    hero_headline: "Por Que Você Não Consegue Emagrecer — Mesmo Fazendo Tudo Certo?",
-    hero_headline_destaque: "Emagrecer",
-
-    // Subheadline: promessa específica + eliminação das objeções principais
-    // (fome, academia, sofrimento) + janela de tempo concreta
-    hero_subheadline: "A resposta está no seu metabolismo, não na sua força de vontade. Mulheres de 25 a 60 anos estão usando a dieta cetogênica para perder de 4 a 12 kg no primeiro mês — comendo bem, sem academia e sem contar caloria.",
-
-    hero_prova_social: "+4.200 mulheres já ativaram a queima de gordura com o NutriKeto",
-
-    // CTA com verbo de ação + benefício emocional
-    hero_cta: "QUERO ATIVAR MEU MODO QUEIMA DE GORDURA →",
-    hero_cta_nota: "🔒 Pagamento seguro via Kiwify · Acesso imediato em qualquer dispositivo",
-
-    // ----------------------------------------------------------
-    // VÍDEO
-    // ----------------------------------------------------------
-    video_titulo: "Assista antes de continuar: a explicação de 3 minutos que vai mudar tudo",
-    video_placeholder_titulo: "Adicione aqui seu vídeo de vendas principal.",
-    video_placeholder_nota: "Dica: páginas com vídeo acima da dobra convertem até 80% mais. Ideal entre 3 e 7 minutos.",
-
-    // ----------------------------------------------------------
-    // PROBLEMA — Técnica PAS (dor + agitação + solução)
-    // Cada item usa linguagem de autoidentificação ("eu sou ela")
-    // ----------------------------------------------------------
-    problema_titulo: "Leia Cada Item Abaixo Com Atenção. Quantos Descrevem Você?",
-    problema_items: [
-      "Já perdeu peso várias vezes — mas ele sempre volta, e com mais gordura do que antes",
-      "Sente fome constante que sabota qualquer dieta antes do fim da semana",
-      "Já cortou carboidrato, mas ficou sem energia, irritada e desistiu em dias",
-      "Se olha no espelho e não reconhece mais o próprio corpo",
-      "Come pouco, mas a balança não se move — parece que seu metabolismo travou de vez",
-      "Não tem tempo nem disposição para receitas complicadas ou ingredientes caros",
-      "Passou dos 35, 40 ou 50 anos e sente que seu corpo mudou e não obedece mais",
-      "Já gastou dinheiro com dietas, shakes e programas que prometem muito e entregam nada",
+    decisao_titulo: "Tudo o que você precisa para decidir está aqui. Sem vídeo longo. Sem enrolação.",
+    decisao_subtitulo: "Se você já perdeu tempo com promessa vaga, sabe o valor de algo direto ao ponto. É exatamente isso que você vai encontrar aqui.",
+    decisao_intro: "Se você carrega o peso de já ter tentado — e de ter voltado ao começo mais de uma vez — o problema nunca foi falta de força de vontade. Foi a ausência de um método que realmente encaixasse na sua rotina. O NutriKeto existe para acabar com esse ciclo. Plano claro, aplicação simples, resultado desde a primeira semana.",
+    decisao_bullets: [
+      "Entenda exatamente o que comer para entrar em cetose — sem precisar pesquisar em dez lugares diferentes",
+      "Siga um plano alimentar de 4 semanas pronto, sem improvisar no almoço nem travar no mercado",
+      "Reduza a fome, o inchaço e a energia oscilando já nos primeiros dias",
+      "Pare de repetir os erros que fazem a maioria abandonar antes de ver qualquer mudança",
+      "Comece hoje mesmo, mesmo que você ache que sua rotina não permite"
     ],
+    decisao_prova_titulo: "Por que tantas mulheres compram sem hesitar?",
+    decisao_prova_texto: "Porque pela primeira vez a oferta faz sentido: você paga uma vez, recebe acesso imediato, segue um plano que foi feito para ser simples — e ainda tem 7 dias de garantia se mudar de ideia. Não existe armadilha. Existe direção.",
+    decisao_cta: "Estou pronta para começar",
 
-    // Parágrafo de transição: quebra a culpa, direciona a causa raiz
-    // Técnica: reframe (o problema não é você, é o método)
-    problema_conclusao: "Se você marcou 2 ou mais itens — preste atenção porque o que vou te dizer agora é importante: a culpa não é sua. Você está usando a estratégia errada para o seu tipo de corpo e fase da vida.",
+    problema_titulo: "Isso te soa familiar?",
+    problema_items: [
+      "Você já emagreceu antes — mas o peso voltou, e dessa vez parece mais teimoso",
+      "Você corta tudo, sofre, resiste — e ainda assim a balança não se mexe",
+      "Você não sabe ao certo o que pode ou não comer numa dieta cetogênica, e fica com medo de errar",
+      "Você sente que seu metabolismo simplesmente parou de cooperar",
+      "Sua rotina é corrida e você não tem tempo para ficar pesquisando receita complicada",
+      "Você se olha no espelho e não reconhece quem está ali — e isso dói mais do que a dieta",
+      "Você quer um caminho claro, não mais uma promessa que te pede para confiar às cegas"
+    ],
+    problema_conclusao: "Se você se viu em alguma dessas linhas, saiba: não é fraqueza. É o resultado de tentar seguir um caminho sem mapa. O problema nunca foi você.",
 
-    // ----------------------------------------------------------
-    // AGITAÇÃO — Amplifica as consequências de não agir
-    // Técnica: future pacing negativo (o que acontece se continuar assim)
-    // ----------------------------------------------------------
-    agitacao_titulo: "O Que Acontece Se Você Continuar Tentando do Mesmo Jeito…",
-    agitacao_texto: "Cada novo ano começa com uma nova promessa. Cada nova dieta traz uma nova frustração. Enquanto isso, o metabolismo fica mais lento, a gordura abdominal se instala, a energia some — e a roupa que você ama continua guardada no fundo do armário. Não é exagero: mulheres que ignoram o sinal de alerta do metabolismo têm até 3x mais dificuldade para emagrecer com o passar dos anos. O corpo não para de mudar. A questão é: você vai esperar mais um ano?",
+    agitacao_titulo: "Cada semana que passa sem agir não é neutra — ela te custa algo",
+    agitacao_texto: "O peso continua. A roupa que você quer usar continua guardada. A energia baixa que você sente toda tarde continua te travando. E a sensação de 'vou começar na semana que vem' continua adiando uma versão sua que você já devia estar vivendo. Isso não é catastrofismo. É o ciclo que você já conhece — e que pode parar hoje.",
 
-    // ----------------------------------------------------------
-    // SOLUÇÃO — Apresenta o produto como a única saída lógica
-    // Técnica: mecanismo único + especificidade científica simplificada
-    // ----------------------------------------------------------
-    solucao_badge: "✦ A Virada Que Você Estava Esperando",
-    solucao_titulo: "Seu Corpo Sabe Queimar Gordura. Ele Só Precisa da Chave Certa Para Isso.",
-    solucao_texto: "A dieta cetogênica não é uma dieta de fome. É uma reprogramação metabólica: você remove o combustível errado (carboidratos em excesso) e o corpo passa a usar a gordura acumulada como energia — 24 horas por dia, mesmo enquanto você dorme. O NutriKeto foi criado para guiar mulheres de 25 a 60 anos por esse processo de forma simples, segura e sem abrir mão do prazer de comer bem.",
+    solucao_badge: "✦ O método que elimina a confusão de uma vez por todas",
+    solucao_titulo: "NutriKeto: o guia que coloca a dieta cetogênica ao alcance da sua rotina real",
+    solucao_texto: "Não é um curso com dezenas de aulas. Não é um app que te cobra mensalidade. É um guia completo, direto e aplicável: você lê, entende, organiza sua semana e começa. Com cardápio pronto, lista de compras e orientação sobre cada etapa da adaptação — para que você não precise adivinhar mais nada.",
 
-    // ----------------------------------------------------------
-    // COMO FUNCIONA — 3 passos
-    // Técnica: simplicidade radical — quanto mais simples parece, mais comprável
-    // ----------------------------------------------------------
-    passos_titulo: "Simples Assim. Três Passos Para Começar Hoje.",
+    passos_titulo: "Como funciona na prática",
     passos: [
       {
         numero: "01",
         icone: "📖",
-        titulo: "Leia o Guia (em 1 tarde)",
-        texto: "O PDF chega no seu e-mail em segundos após o pagamento. Linguagem simples, sem termos médicos. Qualquer mulher entende e consegue aplicar.",
+        titulo: "Leia e entenda o método",
+        texto: "Em poucos minutos você sabe exatamente o que fazer, o que evitar e por que isso funciona — sem precisar virar nutricionista."
       },
       {
         numero: "02",
         icone: "🛒",
-        titulo: "Uma Ida ao Mercado",
-        texto: "Use a lista de compras inclusa. Tudo que você precisa está no mercado do seu bairro. Sem produtos exóticos, sem suplementos caros.",
+        titulo: "Organize sua semana com o plano pronto",
+        texto: "Cardápio de 4 semanas e lista de compras na mão. Você vai ao mercado sabendo o que levar e volta sabendo o que preparar."
       },
       {
         numero: "03",
         icone: "⚖️",
-        titulo: "Sinta a Diferença na 1ª Semana",
-        texto: "A maioria das mulheres relata menos inchaço, mais energia e roupas mais folgadas já nos primeiros 7 dias. A balança vem logo depois.",
-      },
+        titulo: "Aplique e acompanhe sua transformação",
+        texto: "Com o caminho traçado, você para de improvisar e começa a agir com consistência. É isso que gera resultado real."
+      }
     ],
 
-    // ----------------------------------------------------------
-    // BENEFÍCIOS — Foco em transformação, não em características
-    // Técnica: cada benefício responde "o que isso muda na minha vida?"
-    // ----------------------------------------------------------
-    beneficios_titulo: "O Que Está Esperando Por Você Dentro do NutriKeto",
-    beneficios_cta: "QUERO ESSES RESULTADOS AGORA →",
+    beneficios_titulo: "O que você encontra dentro do NutriKeto",
+    beneficios_cta: "Quero esse acesso agora",
     beneficios: [
       {
         icone: "🔥",
-        titulo: "Cetose em Até 72 Horas",
-        texto: "O passo a passo exato para ativar o estado de queima de gordura no seu corpo — sem erro, sem sofrimento e mais rápido do que você imagina.",
+        titulo: "Como entrar em cetose em até 72 horas",
+        texto: "Passo a passo objetivo para ativar o modo de queima de gordura — sem suposição, sem achismo."
       },
       {
         icone: "🍽️",
-        titulo: "A Lista Completa do Que Comer",
-        texto: "Alimentos liberados, proibidos e os 'falsos amigos' que parecem saudáveis mas travam a cetose. Sem adivinhação, sem erro.",
+        titulo: "O que comer, o que evitar e o que sabota sem você perceber",
+        texto: "Lista clara de alimentos permitidos, proibidos e os erros silenciosos que travam o processo da maioria."
       },
       {
         icone: "📅",
-        titulo: "4 Semanas de Cardápio Pronto",
-        texto: "Café da manhã, almoço, jantar e lanches. Você nunca vai ter que pensar 'o que vou comer hoje' — está tudo planejado e explicado.",
+        titulo: "Plano alimentar completo de 4 semanas",
+        texto: "Cardápio diário pronto. Você para de gastar energia decidindo o que comer e começa a gastar energia sendo consistente."
       },
       {
         icone: "🥘",
-        titulo: "Receitas Que Você Vai Querer Repetir",
-        texto: "Pratos gostosos, rápidos e cetogênicos. Feitos com ingredientes do mercado, sem precisar cozinhar horas ou lavar toneladas de panela.",
+        titulo: "Receitas cetogênicas que cabem na sua rotina",
+        texto: "Simples, rápidas e sem ingredientes exóticos. Porque você não precisa ser chef para emagrecer."
       },
       {
         icone: "⚡",
-        titulo: "Como Acabar com o Cansaço dos Primeiros Dias",
-        texto: "O famoso 'keto flu' afasta muitas mulheres nos primeiros dias. O NutriKeto ensina como evitá-lo — ou superar em menos de 48 horas.",
+        titulo: "Como atravessar a adaptação sem desistir",
+        texto: "Estratégias práticas para reduzir os desconfortos iniciais e manter o ritmo quando a motivação oscila."
       },
       {
         icone: "🏆",
-        titulo: "O Método Para Não Engordar de Volta",
-        texto: "A fase de manutenção que 99% dos guias ignoram. É ela que determina se o resultado fica ou vai embora em 30 dias.",
-      },
+        titulo: "Como manter o resultado depois que emagrecer",
+        texto: "Porque perder peso uma vez não é suficiente. Você aprende a não precisar recomeçar do zero nunca mais."
+      }
     ],
 
-    // ----------------------------------------------------------
-    // BÔNUS — Aumenta o valor percebido sem aumentar o preço
-    // Técnica: ancoragem de valor (mostrar preço separado de cada bônus)
-    // ----------------------------------------------------------
-    bonus_titulo: "Além do Guia, Você Recebe Estes Bônus Sem Custo Extra",
-    bonus_badge: "🎁 Bônus Exclusivos Inclusos Hoje",
+    bonus_titulo: "Você ainda leva esses bônus práticos para começar com mais facilidade",
+    bonus_badge: "🎁 Inclusos no seu acesso hoje",
     bonus_valor_total_de: "R$161,00",
     bonus_items: [
       {
         tag: "BÔNUS #1 — GRÁTIS",
         icone: "📋",
-        titulo: "Lista de Compras da 1ª Semana Keto",
-        texto: "Uma lista detalhada, já separada por seção do mercado (laticínios, carnes, hortifrúti…), para você chegar ao mercado e sair em 20 minutos com tudo certo.",
-        valor: "Valor individual: R$ 27,00 — incluso gratuitamente",
+        titulo: "Lista de Compras Keto — Semana 1",
+        texto: "Nada de travar no mercado sem saber o que pegar. Sua primeira semana começa com tudo organizado na palma da mão.",
+        valor: "Valor individual: R$ 27,00 — incluso gratuitamente"
       },
       {
         tag: "BÔNUS #2 — GRÁTIS",
         icone: "🧾",
-        titulo: "10 Receitas Keto em Até 20 Minutos",
-        texto: "As receitas mais pedidas pelas alunas: práticas, saborosas e 100% cetogênicas. Do café da manhã ao jantar — com tempo de preparo real de 20 minutos ou menos.",
-        valor: "Valor individual: R$ 37,00 — incluso gratuitamente",
-      },
+        titulo: "10 Receitas Keto Rápidas",
+        texto: "Receitas simples, sem exigência de talento culinário. Para que a alimentação deixe de ser um obstáculo e vire um hábito.",
+        valor: "Valor individual: R$ 37,00 — incluso gratuitamente"
+      }
     ],
 
-    // ----------------------------------------------------------
-    // DEPOIMENTOS — Prova social com especificidade
-    // Técnica: resultado concreto + identificação (idade + cidade)
-    // SUBSTITUA pelos depoimentos reais dos seus clientes
-    // ----------------------------------------------------------
-    depoimentos_titulo: "Resultados Reais de Mulheres Reais",
+    depoimentos_titulo: "O que quem já começou diz sobre o NutriKeto",
     depoimentos: [
       {
         iniciais: "M.S.",
         nome: "Mariana S., 38 anos — São Paulo/SP",
-        texto: "Tentei low carb, jejum intermitente, shake de proteína… tudo. Sempre ficava com fome e desistia. O NutriKeto foi diferente porque me explicou o porquê de cada coisa. Quando você entende, fica muito mais fácil manter. Em 3 semanas minhas calças já estavam folgadas.",
-        resultado: "✅ 7kg a menos em 3 semanas",
-        foto: "",
-        // Para adicionar foto: coloque o caminho da imagem aqui (ex: "fotos/mariana.jpg")
+        texto: "Eu tinha tentado outras coisas antes e sempre travava porque não sabia exatamente o que fazer. Com o NutriKeto eu parei de adivinhar. Tinha um plano, e eu segui.",
+        resultado: "✅ Sentiu diferença nas roupas em poucas semanas",
+        foto: ""
       },
       {
         iniciais: "A.L.",
         nome: "Ana Lúcia M., 44 anos — Belo Horizonte/MG",
-        texto: "Depois dos 40 parecia que meu corpo tinha dado uma pausa. Fazia tudo certo e não saía do lugar. O guia me mostrou que o problema era o carboidrato escondido que eu nem percebia que comia. Resultado: 11kg em 6 semanas e minha médica ficou surpresa com meus exames.",
-        resultado: "✅ 11kg a menos em 6 semanas",
-        foto: "",
+        texto: "O que mais me surpreendeu foi a clareza. Não precisei ficar pesquisando nada fora. Tudo que eu precisava estava ali, organizado, sem enrolação.",
+        resultado: "✅ Mais controle e constância na alimentação",
+        foto: ""
       },
       {
         iniciais: "C.R.",
         nome: "Cíntia R., 51 anos — Rio de Janeiro/RJ",
-        texto: "Com 51 anos eu achei que tinha perdido a batalha. Menopausa, metabolismo lento, tudo contra mim. O NutriKeto me provou que eu estava errada. Emagreci 9kg, voltei a usar roupas que estavam guardadas há 4 anos e minha energia melhorou muito.",
-        resultado: "✅ 9kg a menos em 5 semanas",
-        foto: "",
-      },
+        texto: "Achei que fosse difícil demais para a minha rotina. Mas fui lendo e percebendo que era muito mais simples do que qualquer coisa que eu tinha tentado antes. Isso me deu confiança para continuar.",
+        resultado: "✅ Mais confiança para emagrecer com método",
+        foto: ""
+      }
     ],
 
-    // ----------------------------------------------------------
-    // OFERTA / PREÇO — Seção de conversão direta
-    // Técnica: ancoragem (preço antigo vs atual) + lista de valor incluído
-    // ----------------------------------------------------------
-    oferta_badge: "🔥 Oferta Especial — Válida Por Tempo Limitado",
-    oferta_titulo: "Tudo Isso Por Menos do Que Você Gasta em Uma Refeição de Delivery",
+    oferta_badge: "🔥 Você chegou até aqui. Isso já diz algo sobre você.",
+    oferta_titulo: "Leve o NutriKeto agora e comece ainda esta semana",
     oferta_itens: [
-      "Guia NutriKeto completo em PDF — leitura em celular, tablet ou computador",
-      "Plano alimentar de 4 semanas com cardápio diário completo",
-      "Lista de compras organizada para a 1ª semana",
-      "10 Receitas cetogênicas rápidas (bônus #1)",
-      "Lista mestre de alimentos liberados e proibidos (bônus #2)",
-      "Acesso imediato logo após o pagamento — sem esperar e-mail",
-      "Suporte por e-mail para dúvidas",
+      "Guia NutriKeto completo em PDF",
+      "Plano alimentar de 4 semanas pronto para seguir",
+      "Lista de compras para a semana 1",
+      "Receitas cetogênicas rápidas e simples",
+      "Bônus inclusos sem nenhum custo extra",
+      "Acesso imediato logo após o pagamento",
+      "Suporte por e-mail"
     ],
-    oferta_cta: "QUERO MEU ACESSO IMEDIATO — R$39,90",
+    oferta_cta: "Quero meu acesso agora",
     oferta_meta: [
-      "🔒 Pagamento 100% seguro via Kiwify",
+      "🔒 Pagamento seguro via Kiwify",
       "💳 Cartão, Pix ou Boleto",
-      "📱 Acesso imediato — leia agora no celular",
+      "📱 Acesso no celular, tablet ou computador"
     ],
 
-    // ----------------------------------------------------------
-    // GARANTIA — Elimina o risco percebido, última barreira antes da compra
-    // Técnica: inversão de risco total (o risco fica com o vendedor)
-    // ----------------------------------------------------------
-    garantia_titulo: "Garantia Total de 7 Dias — Sem Burocracia, Sem Pergunta",
-    garantia_texto: "Você não precisa decidir agora se o NutriKeto vai funcionar para você. Teste por 7 dias. Se por qualquer motivo — mesmo sem motivo nenhum — você não quiser continuar, basta mandar um e-mail e devolvemos cada centavo. Sem formulário. Sem pergunta. Sem demora. Você não tem absolutamente nada a perder. O único risco aqui é nosso.",
+    garantia_titulo: "7 dias de garantia — sem risco, sem burocracia",
+    garantia_texto: "Se você entrar, ler o material e sentir que o NutriKeto não é para você, basta mandar um e-mail dentro de 7 dias. Você recebe tudo de volta. Sem pergunta, sem processo, sem estresse. A decisão é sua — e ela não precisa ter risco nenhum.",
 
-    // ----------------------------------------------------------
-    // FAQ — Antecipa objeções e as resolve antes da decisão final
-    // Técnica: escrever a pergunta como o cliente pensaria, não como empresa
-    // ----------------------------------------------------------
-    faq_titulo: "Suas Dúvidas, Respondidas com Honestidade",
+    faq_titulo: "Ainda tem dúvida? Veja as respostas mais comuns",
     faq_items: [
       {
-        pergunta: "Funciona mesmo para quem já tentou tudo e não conseguiu emagrecer?",
-        resposta: "Sim — e é exatamente para esse perfil que o NutriKeto foi criado. A maioria das mulheres que não consegue emagrecer está usando a abordagem errada para o seu metabolismo. A dieta cetogênica age de forma diferente: em vez de reduzir calorias (que diminui o metabolismo), ela muda a fonte de energia do corpo. O resultado é uma queima de gordura mais eficiente sem a sensação de fome constante.",
+        pergunta: "Preciso assistir horas de vídeo para entender o método?",
+        resposta: "Não. O NutriKeto foi pensado para leitura rápida e consulta fácil — sem aula, sem módulo, sem espera. Você abre, lê e começa."
       },
       {
-        pergunta: "Preciso de academia ou exercícios para ter resultado?",
-        resposta: "Não. O NutriKeto é 100% focado na alimentação. Exercício físico é bem-vindo e potencializa os resultados, mas não é obrigatório. Muitas das nossas alunas tiveram ótimos resultados sem nenhuma atividade física, especialmente no início.",
+        pergunta: "Preciso fazer academia para ter resultado?",
+        resposta: "Não. O guia é focado em alimentação. Se você quiser incluir exercício, ótimo — mas não é uma exigência para ver resultado."
       },
       {
-        pergunta: "Funciona para mulheres acima de 45 ou 50 anos?",
-        resposta: "Muito bem, na verdade. A dieta cetogênica é especialmente eficaz para mulheres nessa fase porque ajuda a equilibrar a insulina e reduzir a inflamação — dois dos principais responsáveis pelo ganho de peso durante e após a menopausa. Temos alunas com 55, 60 anos que tiveram resultados melhores do que esperavam.",
+        pergunta: "Funciona mesmo para quem já tentou outras dietas?",
+        resposta: "Especialmente para quem já tentou. Porque o guia ajuda você a entender onde as tentativas anteriores travaram — e a construir um caminho diferente desta vez."
       },
       {
-        pergunta: "É difícil seguir a dieta cetogênica no dia a dia?",
-        resposta: "A maior dificuldade costuma ser a primeira semana — e o NutriKeto foi criado justamente para tornar essa transição o mais suave possível. A partir da segunda semana, a fome diminui naturalmente, a energia aumenta e a dieta começa a fazer parte da rotina sem esforço.",
+        pergunta: "Como recebo o acesso após a compra?",
+        resposta: "Logo após a confirmação do pagamento, você recebe o acesso direto no e-mail cadastrado. É imediato."
       },
       {
-        pergunta: "Como vou receber o ebook após o pagamento?",
-        resposta: "Imediatamente após a confirmação do pagamento, você receberá um e-mail da Kiwify com o link de acesso ao PDF. Pagamentos por Pix costumam ser liberados em menos de 5 minutos. Se não encontrar o e-mail, verifique a caixa de spam.",
+        pergunta: "Posso acessar pelo celular?",
+        resposta: "Sim. O material é digital e funciona no celular, tablet ou computador — onde for mais confortável para você."
       },
       {
-        pergunta: "E se eu não gostar? Perco meu dinheiro?",
-        resposta: "Não. Você tem 7 dias de garantia total e incondicional. Se não ficar satisfeita — por qualquer motivo — basta enviar um e-mail pedindo o reembolso. Devolveremos 100% do valor sem perguntas. Simples assim.",
-      },
+        pergunta: "E se eu não me adaptar ao método?",
+        resposta: "Você tem 7 dias para testar sem risco. Se não gostar, é só pedir reembolso. Simples assim."
+      }
     ],
 
-    // ----------------------------------------------------------
-    // CTA FINAL — Último empurrão antes da decisão
-    // Técnica: urgência + custo da inação + promessa de transformação
-    // ----------------------------------------------------------
-    final_titulo: "Cada Dia Que Você Espera É Mais Um Dia Longe Do Corpo Que Você Quer",
-    final_texto: "Você já sabe o que acontece quando não faz nada — porque já viveu isso antes. Agora você tem na frente uma ferramenta que já ajudou mais de 4.200 mulheres. O preço especial é de R$39,90. A garantia é de 7 dias. O risco é zero. O que falta?",
-    final_cta: "SIM, QUERO EMAGRECER COM O NUTRIKETO AGORA",
+    final_titulo: "Você já sabe o que precisa mudar. A questão é quando.",
+    final_texto: "Não falta informação solta na internet. O que falta é um caminho organizado, testado e feito para funcionar na vida real — não em condições perfeitas. Se você chegou até aqui, algo dentro de você já tomou a decisão. O NutriKeto está aqui para te dar o próximo passo concreto.",
+    final_cta: "Estou pronta. Quero começar agora.",
 
-    // ----------------------------------------------------------
-    // EXIT INTENT — Popup para quem tenta sair da página
-    // Técnica: reancoragem de preço + urgência real
-    // ----------------------------------------------------------
-
-    // ----------------------------------------------------------
-    // RODAPÉ
-    // ----------------------------------------------------------
-    rodape_aviso_resultados: "Os resultados individuais podem variar. Os depoimentos apresentados são experiências reais de clientes, mas não representam resultados típicos garantidos.",
-    rodape_aviso_medico: "Este conteúdo tem finalidade informativa e educativa e não substitui acompanhamento médico ou nutricional profissional. Consulte um profissional de saúde antes de iniciar qualquer mudança alimentar.",
+    rodape_aviso_resultados: "Os resultados individuais podem variar de acordo com rotina, consistência e contexto pessoal.",
+    rodape_aviso_medico: "Este conteúdo tem caráter informativo e não substitui acompanhamento médico ou nutricional profissional.",
     rodape_plataforma: "Produto distribuído pela plataforma Kiwify. Pagamento 100% seguro.",
     rodape_ano: "2026",
     rodape_link_privacidade: "Política de Privacidade",
@@ -345,41 +264,39 @@ window.CONFIG = {
     rodape_link_suporte: "Suporte",
     rodape_links: {
       politica_privacidade: "politica-privacidade.html",
-      termos_uso: "termos-uso.html",
-    },
+      termos_uso: "termos-uso.html"
+    }
   },
 
   // ============================================================
-  // 7. COMPORTAMENTOS / FUNIL
+  // 6. COMPORTAMENTOS / FUNIL
   // ============================================================
   funil: {
     delay_botao_segundos: 7,
-    contador_minutos: 20,
+    contador_minutos: 47,
     exit_intent_ativo: true,
-    exit_intent_titulo: "⚠️ Espera — Antes de Ir Embora…",
-    exit_intent_texto: "Você está saindo sem garantir seu acesso por R$39,90. Quando voltar, não garantimos que o preço ainda estará disponível.",
-    exit_intent_cta: "QUERO GARANTIR MEU ACESSO AGORA →",
-    exit_intent_recusa: "Não, prefiro continuar do jeito que está →",
+    exit_intent_titulo: "⚠️ Espera — uma coisa antes de sair",
+    exit_intent_texto: "Você passou vários minutos aqui. Isso não foi por acaso. O NutriKeto ainda está disponível nesta condição — mas não por muito tempo.",
+    exit_intent_cta: "Quero garantir meu acesso",
+    exit_intent_recusa: "Não, vou continuar sem método por enquanto →"
   },
 
   // ============================================================
-  // 8. PIXEL DO META ADS
+  // 7. PIXEL DO META ADS
   // ============================================================
   pixel: {
     ativo: false,
-    id: "PIXEL_ID_AQUI",
-    // Como obter: business.facebook.com > Gerenciador de Eventos > Pixels
+    id: ""
   },
 
   // ============================================================
-  // 9. SEO / META TAGS
+  // 8. SEO / META TAGS
   // ============================================================
   seo: {
-    titulo_aba: "NutriKeto — Por Que Você Não Consegue Emagrecer Mesmo Fazendo Tudo Certo?",
-    descricao: "Mulheres de 25 a 60 anos estão perdendo de 4 a 12 kg no primeiro mês com a dieta cetogênica — sem fome, sem academia, sem sofrimento. Descubra o método completo.",
-    indexar: false,
-  },
-
+    titulo_aba: "NutriKeto — Pare de adivinhar. Comece a emagrecer com método.",
+    descricao: "Guia completo da dieta cetogênica com plano alimentar de 4 semanas, lista de compras e receitas práticas. Acesso imediato. Garantia de 7 dias.",
+    indexar: false
+  }
 };
 // ============================================================
 // FIM DO PAINEL DE CONTROLE
