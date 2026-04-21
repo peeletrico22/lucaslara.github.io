@@ -1,262 +1,304 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO: título, description, robots, og:tags — preenchidos pelo script.js -->
-  <meta id="meta-description" name="description" content="">
-  <meta id="meta-robots" name="robots" content="">
-  <meta id="og-title" property="og:title" content="">
-  <meta id="og-description" property="og:description" content="">
-  <meta id="og-image" property="og:image" content="">
-  <title id="page-title"></title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="config.js"></script>
-  <!-- Pixel Meta Ads: inserido dinamicamente pelo script.js quando pixel.ativo = true -->
-</head>
-<body>
+// ============================================================
+//  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗
+// ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝
+// ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+// ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+// ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+//  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
+//
+// NUTRIKETO — PAINEL DE CONTROLE CENTRAL
+// ============================================================
+// Edite SOMENTE este arquivo para atualizar a página.
+// Após editar, salve o arquivo e recarregue o navegador.
+// NÃO é necessário tocar em index.html, style.css ou script.js
+// ============================================================
 
-  <!-- BARRA DE TOPO FIXA -->
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <span id="barra-topo-texto"></span>
-      <span>Expira em: <strong class="countdown-timer">20:00</strong></span>
-    </div>
-  </div>
+window.CONFIG = {
 
-  <main>
+  // ============================================================
+  // 1. INFORMAÇÕES DO PRODUTO
+  // ============================================================
+  produto: {
+    nome: "NutriKeto",
+    slogan: "Guia Completo da Dieta Cetogênica para Emagrecimento Rápido",
+    preco_atual: "R$ 59,90",
+    preco_antigo: "R$ 97,00",
+    parcelas: "ou 3x de R$19,97 sem juros",
+  },
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <span id="hero-badge" class="pill-badge"></span>
-          <div class="brand-logo"><span class="brand-nutri">NUTRI</span><span class="brand-keto">KETO</span></div>
-          <h1 id="hero-headline"></h1>
-          <p id="hero-subheadline" class="lead"></p>
-          <div class="micro-proof">
-            <span class="stars">★★★★★</span>
-            <span id="hero-prova-social"></span>
-          </div>
-          <div class="cta-wrap">
-            <a class="cta-button cta-hero cta-locked" href="#" data-checkout>
-              <span class="cta-loading">⏳ Preparando oferta...</span>
-              <span class="cta-text" id="hero-cta-text" hidden></span>
-            </a>
-            <p id="hero-cta-nota" class="cta-note"></p>
-          </div>
-        </div>
-        <div class="hero-media reveal">
-          <div class="product-img-wrap">
-            <img id="img-capa-3d" src="" alt="NutriKeto Ebook" class="product-img-3d">
-          </div>
-        </div>
-      </div>
-    </section>
+  // ============================================================
+  // 2. IMAGENS
+  // ============================================================
+  imagens: {
+    capa_3d: "Capa 3D.png",
+    capa_2d: "Capa 2D.png",
+    favicon: "Capa 2D.png",
+    og_image: "Capa 2D.png",
+  },
 
-    <!-- VÍDEO -->
-    <section class="section-video section-video-prime alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="video-titulo"></h2>
-        </div>
-        <div id="video-container" class="video-wrap reveal"></div>
-      </div>
-    </section>
+  // ============================================================
+  // 3. LINKS DE PAGAMENTO / CHECKOUT
+  // ============================================================
+  checkout: {
+    link_principal: "https://pay.kiwify.com.br/2L3JkOB",
+    link_bump: "",
+  },
 
-    <!-- PROBLEMA -->
-    <section class="section-problema alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="problema-titulo"></h2>
-        </div>
-        <ul id="problema-lista" class="pain-list reveal"></ul>
-        <p id="problema-conclusao" class="transition-copy reveal"></p>
-      </div>
-    </section>
+  // ============================================================
+  // 4. CONTATO E SUPORTE
+  // ============================================================
+  contato: {
+    whatsapp_numero: "5531999999999",
+    whatsapp_mensagem: "Olá! Tenho uma dúvida sobre o NutriKeto.",
+    email_suporte: "suporte@nutriketo.com.br",
+  },
 
-    <!-- AGITAÇÃO -->
-    <section class="section-agitacao">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="agitacao-titulo"></h2>
-        </div>
-        <div id="agitacao-texto" class="warning-box reveal"></div>
-      </div>
-    </section>
+  // ============================================================
+  // 5. TEXTOS DA PÁGINA — COPY PRINCIPAL
+  // ============================================================
+  copy: {
+    barra_topo: "🔥 Acesso imediato por R$59,90 — o contador está rodando e a condição some com ele",
 
-    <!-- SOLUÇÃO -->
-    <section class="section-solucao alt">
-      <div class="container solution-grid">
-        <div class="solution-copy reveal">
-          <span id="solucao-badge" class="eyebrow"></span>
-          <div class="brand-logo" style="margin:18px 0 10px"><span class="brand-nutri">NUTRI</span><span class="brand-keto">KETO</span></div>
-          <h2 id="solucao-titulo"></h2>
-          <p id="solucao-texto"></p>
-        </div>
-        <div class="solution-media reveal">
-          <img id="img-capa-2d" src="" alt="NutriKeto" class="product-img-2d">
-        </div>
-      </div>
-    </section>
+    hero_badge: "✦ Sem enrolação. Método direto. Resultado desde a primeira semana.",
+    hero_headline: "Você não falhou na dieta. A dieta é que nunca te deu um caminho de verdade",
+    hero_headline_destaque: "não falhou",
+    hero_subheadline: "O NutriKeto entrega o que faltava: um plano claro, cardápio pronto e o passo a passo para ativar a queima de gordura sem precisar reinventar tudo do zero toda segunda-feira.",
+    hero_prova_social: "+4.200 mulheres já pararam de adivinhar e começaram a ver resultado",
+    hero_cta: "Quero meu acesso agora",
+    hero_cta_nota: "🔒 Acesso liberado imediatamente após o pagamento",
 
-    <!-- COMO FUNCIONA -->
-    <section class="section-como-funciona">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2><span class="brand-logo-inline"><span class="brand-nutri">NUTRI</span><span class="brand-keto">KETO</span></span> — <span id="passos-titulo"></span></h2>
-        </div>
-        <div id="passos-grid" class="steps-grid reveal"></div>
-      </div>
-    </section>
+    decisao_titulo: "Tudo o que você precisa para decidir está aqui. Sem vídeo longo. Sem enrolação.",
+    decisao_subtitulo: "Se você já perdeu tempo com promessa vaga, sabe o valor de algo direto ao ponto. É exatamente isso que você vai encontrar aqui.",
+    decisao_intro: "Se você carrega o peso de já ter tentado — e de ter voltado ao começo mais de uma vez — o problema nunca foi falta de força de vontade. Foi a ausência de um método que realmente encaixasse na sua rotina. O NutriKeto existe para acabar com esse ciclo. Plano claro, aplicação simples, resultado desde a primeira semana.",
+    decisao_bullets: [
+      "Entenda exatamente o que comer para entrar em cetose — sem precisar pesquisar em dez lugares diferentes",
+      "Siga um plano alimentar de 4 semanas pronto, sem improvisar no almoço nem travar no mercado",
+      "Reduza a fome, o inchaço e a energia oscilando já nos primeiros dias",
+      "Pare de repetir os erros que fazem a maioria abandonar antes de ver qualquer mudança",
+      "Comece hoje mesmo, mesmo que você ache que sua rotina não permite"
+    ],
+    decisao_prova_titulo: "Por que tantas mulheres compram sem hesitar?",
+    decisao_prova_texto: "Porque pela primeira vez a oferta faz sentido: você paga uma vez, recebe acesso imediato, segue um plano que foi feito para ser simples — e ainda tem 7 dias de garantia se mudar de ideia. Não existe armadilha. Existe direção.",
+    decisao_cta: "Estou pronta para começar",
 
-    <!-- BENEFÍCIOS -->
-    <section class="section-beneficios alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="beneficios-titulo"></h2>
-        </div>
-        <div id="beneficios-grid" class="cards-grid"></div>
-        <div class="cta-wrap centered reveal" style="margin-top:40px;">
-          <a class="cta-button cta-beneficios cta-locked" href="#" data-checkout>
-            <span class="cta-loading">⏳ Preparando oferta...</span>
-            <span class="cta-text" id="beneficios-cta-text" hidden></span>
-          </a>
-        </div>
-      </div>
-    </section>
+    problema_titulo: "Isso te soa familiar?",
+    problema_items: [
+      "Você já emagreceu antes — mas o peso voltou, e dessa vez parece mais teimoso",
+      "Você corta tudo, sofre, resiste — e ainda assim a balança não se mexe",
+      "Você não sabe ao certo o que pode ou não comer numa dieta cetogênica, e fica com medo de errar",
+      "Você sente que seu metabolismo simplesmente parou de cooperar",
+      "Sua rotina é corrida e você não tem tempo para ficar pesquisando receita complicada",
+      "Você se olha no espelho e não reconhece quem está ali — e isso dói mais do que a dieta",
+      "Você quer um caminho claro, não mais uma promessa que te pede para confiar às cegas"
+    ],
+    problema_conclusao: "Se você se viu em alguma dessas linhas, saiba: não é fraqueza. É o resultado de tentar seguir um caminho sem mapa. O problema nunca foi você.",
 
-    <!-- BÔNUS -->
-    <section class="section-bonus">
-      <div class="container">
-        <div class="section-head reveal">
-          <span id="bonus-badge" class="eyebrow"></span>
-          <h2 id="bonus-titulo" style="margin-top:16px;"></h2>
-        </div>
-        <div id="bonus-grid" class="bonus-grid"></div>
-        <div id="bonus-valor-total" class="bonus-valor-total reveal"></div>
-      </div>
-    </section>
+    agitacao_titulo: "Cada semana que passa sem agir não é neutra — ela te custa algo",
+    agitacao_texto: "O peso continua. A roupa que você quer usar continua guardada. A energia baixa que você sente toda tarde continua te travando. E a sensação de 'vou começar na semana que vem' continua adiando uma versão sua que você já devia estar vivendo. Isso não é catastrofismo. É o ciclo que você já conhece — e que pode parar hoje.",
 
-    <!-- DEPOIMENTOS -->
-    <section class="section-depoimentos">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="depoimentos-titulo"></h2>
-        </div>
-        <div id="depoimentos-grid" class="testimonial-grid"></div>
-      </div>
-    </section>
+    solucao_badge: "✦ O método que elimina a confusão de uma vez por todas",
+    solucao_titulo: "NutriKeto: o guia que coloca a dieta cetogênica ao alcance da sua rotina real",
+    solucao_texto: "Não é um curso com dezenas de aulas. Não é um app que te cobra mensalidade. É um guia completo, direto e aplicável: você lê, entende, organiza sua semana e começa. Com cardápio pronto, lista de compras e orientação sobre cada etapa da adaptação — para que você não precise adivinhar mais nada.",
 
-    <!-- OFERTA / PREÇO -->
-    <section class="section-oferta alt">
-      <div class="container">
-        <div class="offer-card reveal">
-          <span id="oferta-badge" class="eyebrow"></span>
-          <div class="brand-logo" style="margin:20px 0 10px"><span class="brand-nutri">NUTRI</span><span class="brand-keto">KETO</span></div>
-          <h2 id="oferta-titulo"></h2>
-          <div class="price-block">
-            <span id="preco-antigo" class="price-old"></span>
-            <span class="price-label-text">Por apenas:</span>
-            <span id="preco-atual" class="price-now"></span>
-            <span id="parcelas" class="price-parcelas"></span>
-          </div>
-          <ul id="oferta-lista" class="check-list"></ul>
-          <div class="cta-wrap centered">
-            <a class="cta-button cta-oferta cta-locked" href="#" data-checkout>
-              <span class="cta-loading">⏳ Preparando oferta...</span>
-              <span class="cta-text" id="oferta-cta-text" hidden></span>
-            </a>
-          </div>
-          <div id="oferta-meta" class="offer-meta"></div>
-        </div>
-      </div>
-    </section>
+    passos_titulo: "Como funciona na prática",
+    passos: [
+      {
+        numero: "01",
+        icone: "📖",
+        titulo: "Leia e entenda o método",
+        texto: "Em poucos minutos você sabe exatamente o que fazer, o que evitar e por que isso funciona — sem precisar virar nutricionista."
+      },
+      {
+        numero: "02",
+        icone: "🛒",
+        titulo: "Organize sua semana com o plano pronto",
+        texto: "Cardápio de 4 semanas e lista de compras na mão. Você vai ao mercado sabendo o que levar e volta sabendo o que preparar."
+      },
+      {
+        numero: "03",
+        icone: "⚖️",
+        titulo: "Aplique e acompanhe sua transformação",
+        texto: "Com o caminho traçado, você para de improvisar e começa a agir com consistência. É isso que gera resultado real."
+      }
+    ],
 
-    <!-- GARANTIA -->
-    <section class="section-garantia">
-      <div class="container guarantee-grid">
-        <div class="shield-wrap reveal">
-          <div class="shield-icon">🛡️</div>
-        </div>
-        <div class="guarantee-copy reveal">
-          <h3 id="garantia-titulo"></h3>
-          <p id="garantia-texto"></p>
-        </div>
-      </div>
-    </section>
+    beneficios_titulo: "O que você encontra dentro do NutriKeto",
+    beneficios_cta: "Quero esse acesso agora",
+    beneficios: [
+      {
+        icone: "🔥",
+        titulo: "Como entrar em cetose em até 72 horas",
+        texto: "Passo a passo objetivo para ativar o modo de queima de gordura — sem suposição, sem achismo."
+      },
+      {
+        icone: "🍽️",
+        titulo: "O que comer, o que evitar e o que sabota sem você perceber",
+        texto: "Lista clara de alimentos permitidos, proibidos e os erros silenciosos que travam o processo da maioria."
+      },
+      {
+        icone: "📅",
+        titulo: "Plano alimentar completo de 4 semanas",
+        texto: "Cardápio diário pronto. Você para de gastar energia decidindo o que comer e começa a gastar energia sendo consistente."
+      },
+      {
+        icone: "🥘",
+        titulo: "Receitas cetogênicas que cabem na sua rotina",
+        texto: "Simples, rápidas e sem ingredientes exóticos. Porque você não precisa ser chef para emagrecer."
+      },
+      {
+        icone: "⚡",
+        titulo: "Como atravessar a adaptação sem desistir",
+        texto: "Estratégias práticas para reduzir os desconfortos iniciais e manter o ritmo quando a motivação oscila."
+      },
+      {
+        icone: "🏆",
+        titulo: "Como manter o resultado depois que emagrecer",
+        texto: "Porque perder peso uma vez não é suficiente. Você aprende a não precisar recomeçar do zero nunca mais."
+      }
+    ],
 
-    <!-- FAQ -->
-    <section class="section-faq alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="faq-titulo"></h2>
-        </div>
-        <div id="faq-lista" class="faq-list reveal"></div>
-      </div>
-    </section>
+    bonus_titulo: "Você ainda leva esses bônus práticos para começar com mais facilidade",
+    bonus_badge: "🎁 Inclusos no seu acesso hoje",
+    bonus_valor_total_de: "R$161,00",
+    bonus_items: [
+      {
+        tag: "BÔNUS #1 — GRÁTIS",
+        icone: "📋",
+        titulo: "Lista de Compras Keto — Semana 1",
+        texto: "Nada de travar no mercado sem saber o que pegar. Sua primeira semana começa com tudo organizado na palma da mão.",
+        valor: "Valor individual: R$ 27,00 — incluso gratuitamente"
+      },
+      {
+        tag: "BÔNUS #2 — GRÁTIS",
+        icone: "🧾",
+        titulo: "10 Receitas Keto Rápidas",
+        texto: "Receitas simples, sem exigência de talento culinário. Para que a alimentação deixe de ser um obstáculo e vire um hábito.",
+        valor: "Valor individual: R$ 37,00 — incluso gratuitamente"
+      }
+    ],
 
-    <!-- CTA FINAL -->
-    <section class="section-cta-final">
-      <div class="container final-cta reveal">
-        <div class="brand-logo"><span class="brand-nutri">NUTRI</span><span class="brand-keto">KETO</span></div>
-        <h2 id="final-titulo"></h2>
-        <p id="final-texto"></p>
-        <div class="cta-wrap centered">
-          <a class="cta-button cta-final cta-locked" href="#" data-checkout>
-            <span class="cta-loading">⏳ Preparando oferta...</span>
-            <span class="cta-text" id="final-cta-text" hidden></span>
-          </a>
-          <div class="tiny-note">⏰ Esta oferta expira em: <span class="countdown-timer">20:00</span></div>
-        </div>
-      </div>
-    </section>
+    depoimentos_titulo: "O que quem já começou diz sobre o NutriKeto",
+    depoimentos: [
+      {
+        iniciais: "M.S.",
+        nome: "Mariana S., 38 anos — São Paulo/SP",
+        texto: "Eu tinha tentado outras coisas antes e sempre travava porque não sabia exatamente o que fazer. Com o NutriKeto eu parei de adivinhar. Tinha um plano, e eu segui.",
+        resultado: "✅ Sentiu diferença nas roupas em poucas semanas",
+        foto: ""
+      },
+      {
+        iniciais: "A.L.",
+        nome: "Ana Lúcia M., 44 anos — Belo Horizonte/MG",
+        texto: "O que mais me surpreendeu foi a clareza. Não precisei ficar pesquisando nada fora. Tudo que eu precisava estava ali, organizado, sem enrolação.",
+        resultado: "✅ Mais controle e constância na alimentação",
+        foto: ""
+      },
+      {
+        iniciais: "C.R.",
+        nome: "Cíntia R., 51 anos — Rio de Janeiro/RJ",
+        texto: "Achei que fosse difícil demais para a minha rotina. Mas fui lendo e percebendo que era muito mais simples do que qualquer coisa que eu tinha tentado antes. Isso me deu confiança para continuar.",
+        resultado: "✅ Mais confiança para emagrecer com método",
+        foto: ""
+      }
+    ],
 
-  </main>
+    oferta_badge: "🔥 Você chegou até aqui. Isso já diz algo sobre você.",
+    oferta_titulo: "Leve o NutriKeto agora e comece ainda esta semana",
+    oferta_itens: [
+      "Guia NutriKeto completo em PDF",
+      "Plano alimentar de 4 semanas pronto para seguir",
+      "Lista de compras para a semana 1",
+      "Receitas cetogênicas rápidas e simples",
+      "Bônus inclusos sem nenhum custo extra",
+      "Acesso imediato logo após o pagamento",
+      "Suporte por e-mail"
+    ],
+    oferta_cta: "Quero meu acesso agora",
+    oferta_meta: [
+      "🔒 Pagamento seguro via Kiwify",
+      "💳 Cartão, Pix ou Boleto",
+      "📱 Acesso no celular, tablet ou computador"
+    ],
 
-  <!-- RODAPÉ -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="brand-logo"><span class="brand-nutri">NUTRI</span><span class="brand-keto">KETO</span></div>
-      <p id="rodape-copy"></p>
-      <div class="footer-links">
-        <a id="link-privacidade" href="#"></a>
-        <span>|</span>
-        <a id="link-termos" href="#"></a>
-        <span>|</span>
-        <a id="link-suporte" href="#"></a>
-      </div>
-      <p id="rodape-plataforma"></p>
-      <p id="rodape-aviso-resultados"></p>
-      <p id="rodape-aviso-medico"></p>
-    </div>
-  </footer>
+    garantia_titulo: "7 dias de garantia — sem risco, sem burocracia",
+    garantia_texto: "Se você entrar, ler o material e sentir que o NutriKeto não é para você, basta mandar um e-mail dentro de 7 dias. Você recebe tudo de volta. Sem pergunta, sem processo, sem estresse. A decisão é sua — e ela não precisa ter risco nenhum.",
 
-  <!-- EXIT INTENT POPUP -->
-  <div id="exit-overlay" class="exit-overlay" aria-hidden="true">
-    <div class="exit-popup" role="dialog" aria-modal="true" aria-labelledby="exit-texto">
-      <button id="exit-close" type="button" class="exit-close" aria-label="Fechar">✕</button>
-      <div class="eyebrow" id="exit-titulo"></div>
-      <h3 id="exit-texto"></h3>
-      <a class="cta-button cta-locked" id="exit-cta" href="#" data-checkout>
-        <span class="cta-loading">⏳ Preparando oferta...</span>
-        <span class="cta-text" id="exit-cta-text" hidden></span>
-      </a>
-      <p id="exit-recusa" class="exit-recusa"></p>
-    </div>
-  </div>
+    faq_titulo: "Ainda tem dúvida? Veja as respostas mais comuns",
+    faq_items: [
+      {
+        pergunta: "Preciso assistir horas de vídeo para entender o método?",
+        resposta: "Não. O NutriKeto foi pensado para leitura rápida e consulta fácil — sem aula, sem módulo, sem espera. Você abre, lê e começa."
+      },
+      {
+        pergunta: "Preciso fazer academia para ter resultado?",
+        resposta: "Não. O guia é focado em alimentação. Se você quiser incluir exercício, ótimo — mas não é uma exigência para ver resultado."
+      },
+      {
+        pergunta: "Funciona mesmo para quem já tentou outras dietas?",
+        resposta: "Especialmente para quem já tentou. Porque o guia ajuda você a entender onde as tentativas anteriores travaram — e a construir um caminho diferente desta vez."
+      },
+      {
+        pergunta: "Como recebo o acesso após a compra?",
+        resposta: "Logo após a confirmação do pagamento, você recebe o acesso direto no e-mail cadastrado. É imediato."
+      },
+      {
+        pergunta: "Posso acessar pelo celular?",
+        resposta: "Sim. O material é digital e funciona no celular, tablet ou computador — onde for mais confortável para você."
+      },
+      {
+        pergunta: "E se eu não me adaptar ao método?",
+        resposta: "Você tem 7 dias para testar sem risco. Se não gostar, é só pedir reembolso. Simples assim."
+      }
+    ],
 
-  <!-- WHATSAPP FLUTUANTE -->
-  <a id="whatsapp-float" class="whatsapp-float" href="#" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-    <span>Dúvidas?</span>
-  </a>
+    final_titulo: "Você já sabe o que precisa mudar. A questão é quando.",
+    final_texto: "Não falta informação solta na internet. O que falta é um caminho organizado, testado e feito para funcionar na vida real — não em condições perfeitas. Se você chegou até aqui, algo dentro de você já tomou a decisão. O NutriKeto está aqui para te dar o próximo passo concreto.",
+    final_cta: "Estou pronta. Quero começar agora.",
 
-  <script src="script.js"></script>
-</body>
-</html>
+    rodape_aviso_resultados: "Os resultados individuais podem variar de acordo com rotina, consistência e contexto pessoal.",
+    rodape_aviso_medico: "Este conteúdo tem caráter informativo e não substitui acompanhamento médico ou nutricional profissional.",
+    rodape_plataforma: "Produto distribuído pela plataforma Kiwify. Pagamento 100% seguro.",
+    rodape_ano: "2026",
+    rodape_link_privacidade: "Política de Privacidade",
+    rodape_link_termos: "Termos de Uso",
+    rodape_link_suporte: "Suporte",
+    rodape_links: {
+      politica_privacidade: "politica-privacidade.html",
+      termos_uso: "termos-uso.html"
+    }
+  },
+
+  // ============================================================
+  // 6. COMPORTAMENTOS / FUNIL
+  // ============================================================
+  funil: {
+    delay_botao_segundos: 7,
+    contador_minutos: 47,
+    exit_intent_ativo: true,
+    exit_intent_titulo: "⚠️ Espera — uma coisa antes de sair",
+    exit_intent_texto: "Você passou vários minutos aqui. Isso não foi por acaso. O NutriKeto ainda está disponível nesta condição — mas não por muito tempo.",
+    exit_intent_cta: "Quero garantir meu acesso",
+    exit_intent_recusa: "Não, vou continuar sem método por enquanto →"
+  },
+
+  // ============================================================
+  // 7. PIXEL DO META ADS
+  // ============================================================
+  pixel: {
+    ativo: false,
+    id: ""
+  },
+
+  // ============================================================
+  // 8. SEO / META TAGS
+  // ============================================================
+  seo: {
+    titulo_aba: "NutriKeto — Pare de adivinhar. Comece a emagrecer com método.",
+    descricao: "Guia completo da dieta cetogênica com plano alimentar de 4 semanas, lista de compras e receitas práticas. Acesso imediato. Garantia de 7 dias.",
+    indexar: false
+  }
+};
+// ============================================================
+// FIM DO PAINEL DE CONTROLE
+// Salve o arquivo e recarregue o navegador para ver as mudanças
+// ============================================================
