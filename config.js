@@ -48,7 +48,7 @@ window.CONFIG = {
   // 4. CONTATO E SUPORTE
   // ============================================================
   contato: {
-    whatsapp_numero: "5531999999999",
+    whatsapp_numero: "5531997038092",
     whatsapp_mensagem: "Olá! Tenho uma dúvida sobre o NutriKeto.",
     email_suporte: "suporte@nutriketo.com.br",
   },
